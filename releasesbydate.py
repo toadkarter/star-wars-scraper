@@ -2,7 +2,8 @@ import calendar
 import pandas as pd
 from datetime import date
 
-class ReleasesInDateRange():
+
+class ReleasesInDateRange:
     def __init__(self):
         self._date = date.today()
         self._year = self._date.year
@@ -12,7 +13,7 @@ class ReleasesInDateRange():
     def get_releases_today(self, df):
         """Selects releases from the dataframe that have come out today"""
         today = self._get_today_as_datetime()
-        day_range = df["Released"]==today
+        day_range = df["Released"] == today
         return df[day_range]
 
     def get_releases_this_month(self, df):

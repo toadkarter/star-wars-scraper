@@ -1,5 +1,5 @@
-from wikitodfconverter import WikiToDfConverter
-from releasesindaterange import ReleasesInDateRange
+from wikitodf import WikiToDfConverter
+from releasesbydate import ReleasesInDateRange
 
 
 df = WikiToDfConverter.create_dataframe_from_url()
@@ -8,9 +8,11 @@ dates = ReleasesInDateRange()
 releases_today = dates.get_releases_today(df)
 releases_this_month = dates.get_releases_this_month(df)
 
+
 def print_releases(releases):
     """TBC how this is going to be formatted"""
-    print(releases["Title"])
+    print(releases["Title"].head())
+
 
 print("Releases coming out today:")
 
