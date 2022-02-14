@@ -6,7 +6,7 @@ df = WikiToDfConverter.create_dataframe_from_url()
 
 dates = ReleasesInDateRange()
 releases_today = dates.get_releases_today(df)
-releases_this_month = dates.get_releases_this_month(df)
+releases_this_month = dates.get_releases_this_month(df) 
 
 
 def print_releases(releases):
